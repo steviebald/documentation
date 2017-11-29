@@ -85,11 +85,11 @@ You need to edit the hostapd configuration file, located at /etc/hostapd/hostapd
 sudo nano /etc/hostapd/hostapd.conf
 ```
 
-Add the information below to the configuration file. This configuration assumes we are using channel 7, with a network name of NameOfNetwork, and a password AardvarkBadgerHedgehog. Note that the name and password should **not** have quotes around them. 
+Add the information below to the configuration file. This configuration assumes we are using channel 7, with a network name of NameOfNetwork, and a password AardvarkBadgerHedgehog. Note that the name and password should **not** have quotes around them. If setting up on a Raspberry Pi Zero W leave out the driver=n180211 line.
 
 ```
 interface=wlan0
-driver=nl80211
+driver=nl80211 #leave this line out for Raspberry Pi Zero W
 ssid=NameOfNetwork
 hw_mode=g
 channel=7
